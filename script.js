@@ -22,16 +22,35 @@ document.getElementById("trigger").addEventListener("keyup",function()
         no=3;
      if(no==1)
       {
+        text.style.display = "block";
         text.textContent="Your password is too weak";
+
       }
      if(no==2)
         {
+          text.style.display = "block";
           text.textContent="Your password is Medium";
         }
       if(no==3)
             {
+              text.style.display = "block";
               text.textContent="Your password is Strong";
-            }       
+            }
+      showBtn.style.display="block";
+      showBtn.onclick=function()
+      {
+        if(input.type=="password")
+          {
+            input.type="text";
+            showBtn.textContent="HIDE";
+          }
+          else
+          {
+            input.type = "password";
+		       	showBtn.textContent = "SHOW";
+          }
+      }    
+             
 })
 console.log("jviu");
 console.log(input);
